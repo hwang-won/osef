@@ -96,10 +96,10 @@
             echo("
         <div class=\"docs_box\" onclick=\"document.forms['docID".$row['id']."'].submit();\">
         <form method=\"post\" action=\"docs-info.php\" enctype=\"multipart/form-data\" name=\"docID".$row['id']."\">
-                    <h2>제목 : ".$row['title']."</h2>
-                    <h4>등록자 : ".$row['member_name']."</h4>
-                    <h3>가격 : ".$row['price']."</h3>
-                    <input type=\"hidden\" name=\"docId\" value=\"".$row['id']."\" >
+            <h2>제목 : ".htmlspecialchars($row['title'])."</h2>
+            <h4>등록자 : ".htmlspecialchars($row['member_name'])."</h4>
+            <h3>가격 : ".htmlspecialchars($row['price'])."</h3>
+            <input type=\"hidden\" name=\"docId\" value=\"".htmlspecialchars($row['id'])."\" >
         </form>                    
         </div>
         ");

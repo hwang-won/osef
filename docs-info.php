@@ -31,7 +31,7 @@
 <section  id="document" class="section">
         <div class="section_container">
             <div class="doc_title">
-                <h1><?= $row["title"];?></h1> 
+                <h1><?= htmlspecialchars($row["title"]);?></h1> 
             </div>
             <hr>
             <div class="doc_wrap">
@@ -40,11 +40,11 @@
                 </div> -->
                 <div class="doc_detail" style="height:800px">
                     <div class="doc_detail_top">
-                        <p>저자: <?=$row["member_name"];?></p>
-                        <p>등록일: <?=$row["upload"];?></p>
+                        <p>저자: <?=htmlspecialchars($row["member_name"]);?></p>
+                        <p>등록일: <?=htmlspecialchars($row["upload"]);?></p>
                     </div>
-                    <h2 class="doc_price">가격: <?=$row["price"];?></h2>
-                    <h3 class="doc_contents">상세내용 : <?=$row["detail"];?></h3>
+                    <h2 class="doc_price">가격: <?=htmlspecialchars($row["price"]);?></h2>
+                    <h3 class="doc_contents">상세내용 : <?=htmlspecialchars($row["detail"]);?></h3>
                     <div class="doc_detail_bottom">
                         <button>바로구매</button>
                     </div>

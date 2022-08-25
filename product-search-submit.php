@@ -281,11 +281,11 @@
                 <input type=\"hidden\" name=\"productId\" value=\"".$row['id']."\" >
                 <img src=\"".$row['link']."\" class=\"product_list_item_img\">
                 <div class=\"product_item_detail\">
-                    <h3>".$row['model']."</h3>
+                    <h3>".htmlspecialchars($row['model'])."</h3>
                     <p>".$korCategory[array_search($row['category'], $engCategory)]."</p>
-                    <p>".$row['place']."</p>
+                    <p>".htmlspecialchars($row['place'])."</p>
                     <p>".$row['start_date']."~".$row['end_date']."</p>
-                    <h3>".$row['price']." /박</h3>
+                    <h3>".htmlspecialchars($row['price'])." /박</h3>
                 </div>
                 </form>
             </div>
