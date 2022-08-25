@@ -1,4 +1,5 @@
 <?php
+include_once("header.html");
 if(isset($_POST['submit'])){
     $fileDir = $_FILES['pdfFile']['tmp_name'];
     $fileTypeExt = explode(".",$_FILES['pdfFile']['name']);
@@ -89,7 +90,7 @@ if(isset($_POST['submit'])){
     echo "<script>alert(\"등록되었습니다\");";
     echo "location.href= \"index.php\";</script>";
 }
-include_once("header.html");
+
 include_once "check-session.php";
 include_once("docs-register.html");
 include_once("footer.html");
