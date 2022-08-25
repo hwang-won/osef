@@ -103,29 +103,29 @@
                         ~
                         <?=$productRow["end_date"];?></p>
                     <p>대여주소:
-                        <?=$productRow["place"];?></p>
+                        <?=htmlspecialchars($productRow["place"]);?></p>
                 </div>
                 <hr class="hr_gray">
                 <div class="product_detail">
                     <h3><i class="far fa-address-card product_icon"></i>대여인정보</h3>
                     <p>대여인:
-                        <?=$productRow["member_name"];?></p>
+                        <?=htmlspecialchars($productRow["member_name"]);?></p>
                     <p>대여인 연락처:
-                        <?=$productRow["member_phone"];?></p>
+                        <?=htmlspecialchars($productRow["member_phone"]);?></p>
                     <p>등록일:
-                        <?=$productRow["upload"];?></p>
+                        <?=htmlspecialchars($productRow["upload"]);?></p>
                 </div>
                 <hr class="hr_gray">
                 <div class="product_detail">
                     <h3><i class="fas fa-info-circle product_icon"></i>상세내용</h3>
-                    <p><?=$productRow["detail"];?></p>
+                    <p><?=htmlspecialchars($productRow["detail"]);?></p>
                 </div>
             </div>
             <div class="product_right">
                 <div class="product_box">
                     <div class="product_title">
                         <h2>가격</h2>
-                        <p><?=$productRow["price"];?>
+                        <p><?=htmlspecialchars($productRow["price"]);?>
                             /박</p>
                     </div>
                     <button class="btn_gray">예약하기</button>
@@ -171,8 +171,8 @@
                 echo ("
                 <div class=\"product_comment\">
                 <div class=\"comment\">
-                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".$row["reply_member_id"]."</p>
-                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".$row["reply_detail"]."</p>
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".htmlspecialchars($row["reply_member_id"])."</p>
+                    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".htmlspecialchars($row["reply_detail"])."</p>
                 </div>
                 </div>            
                 <hr class=\"hr_gray\">                 
@@ -181,8 +181,8 @@
                 echo ("
                     <div class=\"product_comment\">
                     <div class=\"comment\">
-                        <p>".$row["member_id"]."</p>
-                        <p>".$row["detail"]."</p>
+                        <p>".htmlspecialchars($row["member_id"])."</p>
+                        <p>".htmlspecialchars($row["detail"])."</p>
                     </div>
                     </div>            
                     <hr class=\"hr_gray\">                 
@@ -191,8 +191,8 @@
                     echo ("
                         <div class=\"product_comment\">
                         <div class=\"comment\">
-                        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".$row["reply_member_id"]."</p>
-                        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".$row["reply_detail"]."</p>
+                        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".htmlspecialchars($row["reply_member_id"])."</p>
+                        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;".htmlspecialchars($row["reply_detail"])."</p>
                     </div>
                     </div>            
                     <hr class=\"hr_gray\">                 
