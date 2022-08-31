@@ -44,6 +44,9 @@
                             </tr>
                         ZERO_DOCS;
                     }while($row = mysqli_fetch_array($result)){
+                            $row['title']=htmlspecialchars($row['title']);
+                            $row['detail']=htmlspecialchars($row['detail']);
+                            $row['price']=htmlspecialchars($row['price']);
                             echo <<< VIEW_DOCS
                             <tr>
                                 <td>{$row['id']}</td>

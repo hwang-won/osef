@@ -46,6 +46,10 @@
                             </tr>
                         ZERO_PRODUCT;
                     }while($row = mysqli_fetch_array($result)){
+                            $row['model']=htmlspecialchars($row['model']);                            
+                            $row['price']=htmlspecialchars($row['price']);
+                            $row['place']=htmlspecialchars($row['place']);
+                            $row['primakerce']=htmlspecialchars($row['maker']);
                             echo <<< VIEW_PRODUCT
                             <tr>
                                 <td>{$row['id']}</td>
