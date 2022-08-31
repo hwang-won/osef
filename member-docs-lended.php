@@ -44,6 +44,9 @@
                         ZERO_PRODUCT;
                     }else{
                         while($row = mysqli_fetch_array($result)){
+                            $row['title']=htmlspecialchars($row['title']);
+                            $row['detail']=htmlspecialchars($row['detail']);
+                            $row['price']=htmlspecialchars($row['price']);
                             $docs_count += 1;
                             echo <<< VIEW_PRODUCT
                             <tr>
